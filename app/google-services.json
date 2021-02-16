@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "216106628904",
+    "project_id": "seedpool-mvp",
+    "storage_bucket": "seedpool-mvp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:216106628904:android:5765f18629ab2fd022021d",
+        "android_client_info": {
+          "package_name": "com.seedpool.mvp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "216106628904-4f55r8kme4l0ng99no2e49ndhi6f5gtl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLeJOIxQBueuz1tzmolaCwG1GRv9cP58I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "216106628904-4f55r8kme4l0ng99no2e49ndhi6f5gtl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

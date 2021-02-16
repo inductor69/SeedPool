@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_height="wrap_content"
+              android:layout_width="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:id="@+id/container_image_left"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:drawableLeft="@drawable/shape_line"
+            android:drawableRight="@drawable/shape_line"
+            android:id="@+id/header_image_left"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:text="@string/app_name"
+    />
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_height="wrap_content"
+                  android:layout_width="match_parent"
+                  android:orientation="horizontal"
+                  android:padding="3dp"
+                  android:id="@+id/message_layout_image_left">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/circle_sender_image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/contact_placeholder"
+                app:civ_border_color="@color/colorPrimary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="3dp"
+                app:layout_constraintStart_toEndOf="@+id/circle_sender_image"
+                app:layout_constraintTop_toTopOf="@+id/circle_sender_image">
+
+            <TextView
+                    android:id="@+id/messageText_sender_image_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:maxWidth="240dp"
+                    android:paddingLeft="2dp"
+                    android:paddingBottom="5dp"
+                    android:text="Sender"
+                    android:textColor="@color/red"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="50dp"
+                    android:background="@drawable/shape_bubble_left"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                <com.seedpool.mvp.views.RoundCornerLayout
+                        android:id="@+id/image_container_left_card"
+                        android:layout_width="240dp"
+                        android:layout_height="210dp"
+                        android:background="@drawable/shape_bubble_left"
+                        android:orientation="vertical"
+                        app:bottomLeftEnabled="true"
+                        app:bottomRightEnabled="true"
+                        app:cornerRadius="35dp"
+                        app:topLeftEnabled="false"
+                        app:topRightEnabled="true">
+
+
+                    <ImageView
+                            android:id="@+id/imageview_image_left"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/placeholder_image" />
+
+                    <View
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:background="@drawable/image_background" />
+
+                    <TextView
+                            android:id="@+id/time_image_left"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end|bottom"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="4dp"
+                            android:paddingLeft="20dp"
+                            android:paddingTop="2dp"
+                            android:paddingRight="10dp"
+                            android:text="12:10 PM"
+                            android:textColor="@color/transparent_white_10"
+                            android:textSize="10sp" />
+
+
+                </com.seedpool.mvp.views.RoundCornerLayout>
+
+
+                <TextView
+                        android:id="@+id/messageText_image_left"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:maxWidth="240dp"
+                        android:textColor="@color/black"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:text="Caption is sed for image" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</LinearLayout>
+
+

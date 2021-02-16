@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/container_image_right"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:drawableLeft="@drawable/shape_line"
+            android:drawableRight="@drawable/shape_line"
+        android:id="@+id/header_image_right"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        android:text="@string/app_name"
+        />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+                  android:orientation="vertical"
+                  android:padding="5dp"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/message_layout_image_right">
+
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:background="@drawable/shape_bubble_right"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+            <com.seedpool.mvp.views.RoundCornerLayout
+                    android:id="@+id/image_container_right_card"
+
+                    android:layout_width="240dp"
+
+                    android:layout_height="210dp"
+                    android:background="@drawable/shape_bubble_right"
+                    android:orientation="vertical"
+                    app:bottomLeftEnabled="true"
+                    app:bottomRightEnabled="false"
+                    app:cornerRadius="35dp"
+                    app:topLeftEnabled="true"
+                    app:topRightEnabled="true">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/imageFrameLayoutRight"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                    <ImageView
+                            android:id="@+id/imageview_image_right"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/placeholder_image"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                            android:id="@+id/imageview_image_control_right"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:clickable="true"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/ic_clear_white_24dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/tap_retry_image_right"
+                            app:layout_constraintEnd_toEndOf="@+id/tap_retry_image_right"
+                            app:layout_constraintStart_toStartOf="@+id/tap_retry_image_right"
+                            app:layout_constraintTop_toTopOf="@+id/tap_retry_image_right" />
+
+
+                    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                            android:id="@+id/progress_bar_image_right"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:background="@color/transparent_black_1"
+                            android:indeterminate="false"
+                            android:progressDrawable="@drawable/progress_drawable"
+                            app:cpb_background_progressbar_color="@color/transparent_black_7"
+                            app:cpb_background_progressbar_width="5dp"
+                            app:cpb_progress="0"
+                            app:cpb_progressbar_color="@color/colorAccent"
+                            app:cpb_progressbar_width="5dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageview_image_control_right"
+                            app:layout_constraintEnd_toEndOf="@+id/tap_retry_image_right"
+                            app:layout_constraintStart_toStartOf="@+id/tap_retry_image_right"
+                            app:layout_constraintTop_toTopOf="@+id/imageview_image_control_right" />
+
+                    <TextView
+                            android:id="@+id/tap_retry_image_right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:alpha="0.8"
+                            android:background="@drawable/blurred_text_background"
+                            android:drawableLeft="@drawable/ic_file_upload_white_24dp"
+                            android:padding="15dp"
+                            android:text="Tap to Retry"
+                            android:textColor="@color/white"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageview_image_right"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/imageview_image_right"
+                            app:layout_constraintTop_toTopOf="@+id/imageview_image_right" />
+
+
+                    <View
+                            android:id="@+id/view3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:background="@drawable/image_background" />
+
+                    <LinearLayout
+                            android:id="@+id/linearLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end|bottom"
+                            android:gravity="end"
+                            android:orientation="horizontal"
+                            android:padding="5dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageview_image_right"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent">
+
+
+                        <TextView
+                                android:id="@+id/time_image_right"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="end"
+                                android:layout_marginRight="4dp"
+                                android:text="12:10 PM"
+                                android:textAllCaps="true"
+                                android:textColor="@color/transparent_white_17"
+                                android:textSize="10sp" />
+
+                        <ImageView
+                                android:id="@+id/delivery_image_status"
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_gravity="center" />
+
+
+                    </LinearLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            </com.seedpool.mvp.views.RoundCornerLayout>
+
+
+            <TextView
+                    android:id="@+id/messageText_image_right"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:autoLink="all"
+                    android:gravity="center"
+                    android:maxWidth="230dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Caption is used for image asasfasfasfasfasfasfasfasfasfasfasfwhich is not optional"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+
+        </LinearLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

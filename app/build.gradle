@@ -1,0 +1,114 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'io.fabric'
+
+
+android {
+    signingConfigs {
+    }
+    compileSdkVersion 29
+    flavorDimensions "versionCode"
+    defaultConfig {
+        applicationId "com.seedpool.mvp"
+        minSdkVersion 16
+        targetSdkVersion 29
+        versionCode 10
+        versionName "1.3.1"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+    androidExtensions {
+        experimental = true
+    }
+    aaptOptions {
+        noCompress "tflite"
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    //noinspection GradleCompatible
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.google.android.gms:play-services-base:16.0.1'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.github.stfalcon:chatkit:0.3.3'
+    implementation platform('com.google.firebase:firebase-bom:26.3.0')
+    implementation 'com.google.firebase:firebase-database-ktx'
+    implementation 'com.google.firebase:firebase-messaging:20.0.0'
+    implementation 'com.google.firebase:firebase-auth:19.1.0'
+    implementation 'com.google.firebase:firebase-database:19.2.0'
+    implementation 'com.google.firebase:firebase-storage:19.1.0'
+    // FirebaseUI for Firebase Realtime Database
+    implementation 'com.firebaseui:firebase-ui-database:6.0.2'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'com.chaos.view:pinview:1.4.2'
+    implementation 'com.vincent.filepicker:MultiTypeFilePicker:1.0.8'
+    implementation 'de.hdodenhof:circleimageview:3.0.1'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    // do not update this library or else file picker library will crash
+    //noinspection GradleDependency
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    //noinspection GradleDependency
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+
+    //for image compression
+    implementation 'me.shaohui.advancedluban:library:1.3.5'
+    implementation 'com.nex3z:notification-badge:1.0.2'
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation('com.github.ozodrukh:CircularReveal:1.3.1@aar') {
+        transitive = true
+    }
+    implementation 'com.mikhaellopez:circularprogressbar:2.0.0'
+    implementation 'androidx.emoji:emoji-bundled:1.0.0'
+    implementation 'com.github.lguipeng:AnimCheckBox:1.0.1'
+    implementation 'com.skyline.widget:round-corner-layout:1.0.1'
+    implementation 'com.hbb20:ccp:2.2.4'
+    implementation 'org.jetbrains.anko:anko-commons:0.10.8'
+    implementation 'org.jetbrains.anko:anko-design:0.10.8'
+    implementation 'com.github.medyo:android-about-page:1.2.5'
+
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.8.0'
+    implementation 'com.yarolegovich:lovely-dialog:1.1.0'
+
+    implementation 'com.aurelhubert:ahbottomnavigation:2.3.4'
+
+    //ML
+    implementation 'com.google.firebase:firebase-ml-natural-language:22.0.0'
+    implementation 'com.google.firebase:firebase-ml-natural-language-smart-reply-model:20.0.7'
+    implementation 'com.google.firebase:firebase-ml-natural-language-language-id-model:20.0.7'
+    implementation 'com.google.firebase:firebase-ml-natural-language-translate-model:20.0.7'
+
+    //Ads
+    implementation 'com.google.android.gms:play-services-ads:18.2.0'
+
+    // (Recommended) Add Analytics
+    implementation 'com.google.firebase:firebase-analytics:17.2.1'
+
+    // Add dependency
+    implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
+
+
+    //noinspection GradleDependency
+    implementation 'com.miguelcatalan:materialsearchview:1.4.0'
+
+    implementation 'com.gauravbhola.ripplepulsebackground:library:1.0.0'
+
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
+
+}
